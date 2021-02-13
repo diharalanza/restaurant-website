@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Users</title>
+
+</head>
+<body>
+	<%- include('../partials/header'); -%>
+
+	<br>
+
+  <h2>Purchased by: <%=purchase.user.username%> </h2>
+
+  <p>_________________________________________________</p>
+
+  <h2>Purchased from: <%=purchase.info.restaurantName%> </h2>
+
+    <p>_________________________________________________</p>
+
+  <h2>Order details:</h2>
+
+  <% for(item in purchase.info.order){ %>
+    <h3>name: <%= purchase.info.order[item].name%> </h3>
+    <h3>quantity: <%= purchase.info.order[item].quantity%> </h3>
+    <p>-------------------------------------------------------------------------</p>
+  <% } %>
+
+    <h2>Bill:</h2>
+    <h3>subtotal: $<%= purchase.info.subtotal%> </h3>
+    <h3>tax: $<%= purchase.info.tax%> </h3>
+    <h3>delivery fee: $<%= purchase.info.fee%> </h3>
+    <h3>total: $<%= purchase.info.total%> </h3>
+
+
+	<%- include('../partials/footer'); -%>
+
+</body>
+</html>

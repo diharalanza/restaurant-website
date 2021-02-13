@@ -1,0 +1,18 @@
+html
+	head
+		title LOTR Restaurants
+	body
+		include ../partials/header
+
+		div#main
+			h1 Welcome to the Stats Page!
+
+
+		h2 ----------------------------------------------
+		each res in stats
+			h3 Name of restaurant: #{res.name}
+			h4 Number of orders: #{res.quantity}
+			h4 Average order total: $#{res.average}
+			h4 Most popular item: #{res.popular}
+			h4 ----------------------------------------------------------------------
+			br

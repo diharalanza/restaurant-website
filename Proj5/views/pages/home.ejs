@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+
+</head>
+<body>
+
+  <script type="text/javascript">
+    var error = <%= error %>;
+    if(error == 1){
+      alert('A user is already logged in. Please logout first.');
+    }
+    if(error == 2){
+      alert('Password is incorrect.Try again.');
+    }
+    if(error == 3){
+      alert('User does not exist. Try registering first.');
+    }
+    if(error == 4){
+      alert('Username already taken. Try a different one.');
+    }
+</script>
+
+  <h1>Welcome to the home page!<br/></h1>
+
+  <form action="/register" method="post">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username"><br><br>
+  <label for="password">Password:</label>
+  <input type="text" id="password" name="password"><br><br>
+  <button type="submit">Register</button>
+  <button type="submit" formaction="/login">Login</button>
+</form>
+
+  <script src="client.js"></script>
+</body>
+</html>

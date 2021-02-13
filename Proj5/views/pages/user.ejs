@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Profile</title>
+
+</head>
+<body>
+
+  <a href="/logout" id="logout">Logout</a>
+
+  <h3>Userame: <%=user.username%> </h3>
+
+  <br><br>
+
+  <h2>Your Cards:</h2>
+    <% for (let card in user.cardNames) { %>
+      <p><%=user.cardNames[card].name%></p>
+      <% } %>
+
+  <br><br>
+
+  <label for="searchUser">Search for a user to send a friend request to:</label>
+  <input type="text" id="searchUser" name="searchUser"><br><br>
+  <button onclick="search()">Search</button>
+  <div id = "result"></div>
+
+  <br><br>
+
+  <h2>Friend Requests:</h2>
+  <div id = "friendrequestsdiv"></div>
+
+  <br><br>
+
+  <h2>Your Friends:</h2>
+  <div id = "friendsdiv"></div>
+
+
+  <script src="client.js"></script>
+</body>
+</html>

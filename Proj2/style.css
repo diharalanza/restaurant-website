@@ -1,0 +1,122 @@
+*
+.dropbtn {
+  font-style: italic;
+  position: relative;
+  background-color: blue;
+  color: white;
+  padding: 16px;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  left: 40%;
+
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  font-style: italic;
+  background-color: darkblue;
+}
+
+
+
+
+
+.info{
+  font-style: italic;
+
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+.quickmenu{
+  font-style: italic;
+
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  font-size: 23px;
+
+
+}
+
+
+.mainmenu{
+
+  font-style: italic;
+
+
+  text-align: left;
+ position: relative;
+ left: 390px;
+ top: -270px;
+ width: 450px;
+ padding: 60px ;
+ outline-style: dotted;
+
+
+}
+
+.summaryinfo1{
+  text-align: right;
+  position: absolute;
+  top: 50px;
+  right: 40px;
+  font-size: 18px;
+  width: 200px;
+  height: 300px;
+  padding: 20px;
+}
+
+.summaryinfo2{
+  font-style: italic;
+  margin-bottom: 0;
+  text-align: right;
+  position: absolute;
+  top: 19px;
+  right: 0px;
+  font-size: 18px;
+  width: 300px;
+
+  padding: 20px;
+  background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+    background: rgba(204, 204, 204, 0.5);
+
+
+
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("imageedit_1_5392000824.jpg");
+
+
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+
+  .submitornot {
+    background-color: #008CBA; /* Green */
+ border: none;
+ color: white;
+ padding: 10px 24px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 20px;
+ margin: 4px 2px;
+ cursor: pointer;
+    background-color: white;
+  color: #008000;
+  border: 2px solid #4CAF50;
+  font-style: italic;
+    padding: 10px 24px;
+    border-radius: 2%;
+}
+
+.submitornot:hover {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 24px;
+}

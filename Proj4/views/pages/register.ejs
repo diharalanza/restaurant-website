@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+
+</head>
+<body>
+	<%- include('../partials/header'); -%>
+
+  <script type="text/javascript">
+  var error = <%=regError %>;
+  if(error == true){
+    alert('Username already taken.');
+  }
+  </script>
+
+	<br>
+
+  <form action="/register" method="post">
+    Username: <input type="text" name="username" required><br>
+    Password: <input type="password" name="password" required><br>
+    <button type="submit">Register</button>
+  </form>
+
+	<%- include('../partials/footer'); -%>
+
+  <script src="client.js"></script>
+</body>
+</html>

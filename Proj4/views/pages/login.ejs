@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+
+</head>
+<body>
+	<%- include('../partials/header'); -%>
+
+  <script type="text/javascript">
+  var error = <%= loginError %>;
+  if(error == 1){
+    alert('Already logged in.');
+  }
+  if(error == 2){
+    alert('Password is incorrect. Try again');
+  }
+  if(error == 3){
+    alert('User does not exist. Try again');
+  }
+  if(error == 4){
+    alert('Please login first');
+  }
+  </script>
+
+	<br>
+
+  <form action="/login" method="post">
+    Username: <input type="text" name="username" required><br>
+    Password: <input type="password" name="password" required><br>
+    <button type="submit">Login</button>
+  </form>
+
+	<%- include('../partials/footer'); -%>
+
+  <script src="client.js"></script>
+</body>
+</html>

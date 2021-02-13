@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Users</title>
+
+</head>
+<body>
+	<%- include('../partials/header'); -%>
+
+	<br>
+
+  <h3>Userame: <%=user.username%> </h3>
+
+
+  <% if(user.ownprofile == true){ %>
+    <input type="button" value="" id ="ifPrivate" onclick = "togglePrivacy()">
+    <% if(user.privacy == true){ %>
+      <script>
+        document.getElementById("ifPrivate").value = "Turn off private mode"
+      </script>
+      <% }else{ %>
+        <script>
+          document.getElementById("ifPrivate").value = "Turn on private mode"
+        </script>
+      <% } %>
+  <% } %>
+
+
+  <h4>Purchase History:</h3>
+    <% for (let purchase in user.purchases) { %>
+      <a href="/orders/<%=user.purchases[purchase]._id%>" ><%=user.purchases[purchase]._id%></a>
+      <br>
+      <% } %>
+
+	<%- include('../partials/footer'); -%>
+
+  <script src="client.js"></script>
+</body>
+</html>

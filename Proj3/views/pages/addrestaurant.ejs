@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add a Restaurant</title>
+
+</head>
+<body onload="populateNamesArray()">
+	<%- include('../partials/header'); -%>
+
+	<br>
+
+  <label for="addname">Name of restaurant:</label><br>
+  <input type="text" id="addname" name="addname" value=""><br>
+
+  <label for="addfee">Delivery Fee:</label><br>
+  <input type="text" id="addfee" name="addfee" value=""><br>
+
+	<label for="addminorder">Minimum order:</label><br>
+  <input type="text" id="addminorder" name="addminorder" value=""><br>
+
+	<br>
+
+  <input type="button" value="Click to submit" id ="submit" onclick = "isValid()">
+
+	<%- include('../partials/footer'); -%>
+
+  <script src="client.js"></script>
+</body>
+</html>

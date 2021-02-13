@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> <%= restaurant.name%> </title>
+
+</head>
+<body onload = "getRestaurantData()">
+	<%- include('../partials/header'); -%>
+
+  <h3>
+    ID: <%=restaurant.id%> &#160
+    Name: <input type="text" id="specname" value="<%=restaurant.name%>"> &#160
+    Delivery Fee: <input type="text" id="specfee" value="<%=restaurant.delivery_fee%>"> &#160
+    Minimum Order: <input type="text" id="specminorder" value="<%=restaurant.min_order%>">
+  </h3>
+
+  <p>
+  Add new category: <input type="text" id="speccat" value="">
+  <input type="button" value="Add" id ="addcat" onclick = "newCategory()">
+  </p>
+
+  <p>Add a new menu item:
+    <select id="mySelect">
+    </select> &#160
+
+    <input type="text" id="name" value="Enter a name"> &#160
+    <input type="text" id="descrip" value="Enter a description"> &#160
+    <input type="text" id="price" value="Enter a price">
+    <input type="button" value="Add" id ="additem" onclick = "newMenuItem()">
+
+  </p>
+
+  <div id ='menu'>
+
+    <% for (let category in restaurant.menu){ %>
+
+      <div id ='<%=category %>'>
+
+        <h2><%=category %></h2>
+        <% for (let foodID in restaurant.menu[category]){ %>
+          <div>
+            <p>ID: <%= foodID%></p>
+            <p>Name: <%= restaurant.menu[category][foodID].name %></p>
+            <p>Description: <%= restaurant.menu[category][foodID].description %></p>
+            <p>Price: $<%= restaurant.menu[category][foodID].price %></p>
+            <p>_________________________________________________________________________________________________</p>
+        </div>
+          <% } %>
+
+      </div>
+    <% } %>
+  </div>
+
+  <input type="button" value="Save changes" id ="Save changes" onclick = "sendUpdated()">
+
+
+	<%- include('../partials/footer'); -%>
+
+  <script src="client.js"></script>
+</body>
+</html>

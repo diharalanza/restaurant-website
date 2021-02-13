@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Restaurants</title>
+
+</head>
+<body>
+	<%- include('../partials/header'); -%>
+
+	<br>
+
+  <% for (let restaurant in restaurants) { %>
+			<a href="/restaurants/<%=restaurants[restaurant].id%>" ><%= restaurants[restaurant].name%></a>
+			<br>
+  <%  }; %>
+
+	<%- include('../partials/footer'); -%>
+  
+  <script src="client.js"></script>
+</body>
+</html>
